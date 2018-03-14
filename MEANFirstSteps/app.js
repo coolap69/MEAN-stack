@@ -6,7 +6,7 @@ var question = require('./talk/question');
 talk.intro();
 talk.hello("Simon");
 
-var answer = question.ask("what is the meaning of life");
-console.log(answer)
+var answer = question.ask("what is the meaning of life?");
+console.log(answer);
 
 goodbye();
