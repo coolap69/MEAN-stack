@@ -1,7 +1,7 @@
 {
   "name": "mean-app",
   "version": "1.0.0",
-  "description": "Mean stack application",
+  "description": "MEAN stack application",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,8 @@
   "homepage": "https://github.com/coolap69/MEAN-stack#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongodb": "^3.0.5"
   },
   "devDependencies": {
     "mocha": "^5.0.4"
