@@ -1,4 +1,4 @@
-var moongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var reviewSchema = new mongoose.Schema({
     name: {
@@ -40,7 +40,7 @@ var hotelSchema = new mongoose.Schema({
         type: Number,
         min: 0,
         max: 5,
-        "default": 0
+        default : 0
     },
     services: [String],
     description: String,
