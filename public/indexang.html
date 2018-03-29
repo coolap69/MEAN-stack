@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>JS Bin</title>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet"/>-->
+    <!--<link href="css/custom.css" rel="stylesheet"/>-->
+    <style>
+        .ng-cloak, [ng-cloak], [ng\:cloak] {
+            display: none !important;
+        }
+        
+        .red {
+            border-color: red;
+            color: red;
+        }
+        .green {
+            border-color: green;
+            color: green;
+        }
+    </style>
+
+</head>
+<body ng-cloak>
+    <div ng-init="rebels = [
+    {name: 'Luke Skywalker', profession: 'Jedi', weapon: 'lightsaber', age: 19},
+    {name: 'Ben Kenobi', profession: 'Jedi', weapon: 'lightsaber', age: 56},
+    {name: 'Han Solo', profession: 'Smuggler', weapon: 'laser blaster', age: 32},
+    {name: 'Chewbacca', profession: 'Pilot', weapon: 'bowcaster', age: 200}];">
+        
+       <select name ="" id="" ng-model="rebel" ng-options="rebel.name group
+       by rebel.weapon for rebel in rebels"></select>
+       <p> you have selected: {{ rebel.name }} ({{ rebel.profession }})</p>
+        <!--<ul>-->
+        <!--    <li ng-repeat="rebel in rebels"> {{ rebel.name }}</li>-->
+        <!--</ul>-->
+    </div>
+    
+    <div ng-init="number = 0">
+        <button ng-click="number = number + 1"> +1</button>
+        <button ng-click="number = number - 1"> -1</button>
+        <p> {{ number }}</p>
+    </div>
+    
+    show me the paragraph <input type="checkbox" ng-model="isChecked">
+    <p ng-if="isChecked"> Secret message</p>
+    <p ng-show="isChecked"> Secret message</p>
+        
+        <div ng-init="number =19">
+            <input type="text" ng-model="guess" ng-class="{red: guess !=number,
+            green: guess == number}">
+                <!--<div ng-init="number =19">-->
+            <!--<p ng-hide="guess !=number">Correct</p>-->
+            <!--<p ng-show="guess != number">Incorrect</p>-->
+        </div>
+        
+        <div ng-init="numbers = [0,1,2,3,4,5,6,7]">
+            <ul>
+                <!--<li ng-repeat="number in numbers">{{ number }}</li>-->
+                <li ng-repeat="number in numbers" ng-class="{red: $even, green: $odd}">{{ number }}</li>
+
+            </ul>
+        </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+
+</body>
+</html>
