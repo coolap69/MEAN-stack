@@ -24,8 +24,33 @@
     </div>
 
      <div ng-init="myArray = [0,1,2,3,4,5]">
-        <p> {{ myArray | limitTo: }}</p>
+        <p> {{ myArray | limitTo: 4 }}</p>
     </div>
+
+    <div ng-init="rebels = [
+    {name: 'Luke Skywalker', profession: 'Jedi', weapon: 'lightsaber', age: 19},
+    {name: 'Ben Kenobi', profession: 'Jedi', weapon: 'lightsaber', age: 56},
+    {name: 'Han Solo', profession: 'Smuggler', weapon: 'laser blaster', age: 32},
+    {name: 'Chewbacca', profession: 'Pilot', weapon: 'bowcaster', age: 200}];">
+    
+    <ul>
+       Weapon filter:<input type ="text" ng-model="search.weapon">
+       <p>Free text filter:<input type ="text" ng-model="search.$"></p>
+        
+<p></p>
+       <li ng-repeat= "rebel in rebels | filter: search"> {{ rebel.name }} (age: {{ rebel.age }} 
+        is a {{ rebel.profession }} fighting with a {{ rebel.weapon }}</li>
+        
+        
+        <!--<li ng-repeat= "rebel in rebels | orderBy: 'name'"> {{ rebel.name }} (age: {{ rebel.age }} -->
+        <!--is a {{ rebel.profession }} fighting with a {{ rebel.weapon }}</li>-->
+        
+        <!--<li ng-repeat= "rebel in rebels | orderBy: ['profession', '-age"> {{ rebel.name }} (age: {{ rebel.age }} -->
+        <!--is a {{ rebel.profession }} fighting with a {{ rebel.weapon }}</li>-->
+        <p></p>
+          <li ng-repeat= "rebel in rebels | filter: 'Luke'"> {{ rebel.name }} (age: {{ rebel.age }} 
+        is a {{ rebel.profession }} fighting with a {{ rebel.weapon }}</li>
+    </ul>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
