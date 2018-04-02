@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/coolap69/MEAN-stack#readme",
   "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "mongodb": "^3.0.5",
