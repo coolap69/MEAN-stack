@@ -12,4 +12,5 @@ function config($routeProvider) {
       controller: HotelsController,
       controllerAs: 'vm'
     });
+    
 }
