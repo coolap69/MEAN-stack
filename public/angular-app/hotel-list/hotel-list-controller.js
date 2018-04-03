@@ -8,4 +8,3 @@ function HotelsController(hotelDataFactory) {
     vm.hotels = response.data;
   });
 }
-  

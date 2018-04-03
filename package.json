@@ -21,6 +21,7 @@
   "homepage": "https://github.com/coolap69/MEAN-stack#readme",
   "dependencies": {
     "angular": "^1.6.9",
+    "angular-jwt": "^0.1.9",
     "angular-route": "^1.6.9",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",

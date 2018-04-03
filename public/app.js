@@ -1,4 +1,6 @@
-angular.module('meanhotel', ['ngRoute']).config(config);
+/*global angular HotelsController HotelController*/
+
+angular.module('meanhotel', ['ngRoute', 'angular-jwt']).config(config);
 
 function config($routeProvider) {
   $routeProvider
@@ -9,7 +11,7 @@ function config($routeProvider) {
     })
     .when('/hotel/:id', {
       templateUrl: 'angular-app/hotel-display/hotel.html',
-      controller: HotelsController,
+      controller: HotelController,
       controllerAs: 'vm'
     });
     
