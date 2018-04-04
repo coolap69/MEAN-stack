@@ -10,8 +10,8 @@ var open = function() {
       console.log("DB connection failed");
       return;
     }
-    _connection = client.db("meanhotel");
-    console.log("DB connection open", client);
+    _connection = db;
+    console.log("DB connection open");
   });
 };
 
